@@ -46,9 +46,9 @@ void main() {
     displaced.x += cos(angle) * t * 20.0 * rndz;
     displaced.y += sin(angle) * t * 20.0 * rndz;
 
-    float psize = (snoise2(vec2(uTime, pindex) * 0.5) + 2.0);
-    psize *= max(grey, .1);
-    psize *= uSize / 1.1;
+    float psize = 1.5;
+    psize *= max(grey, .9);
+    psize *= uSize / 0.99;
 
     vec4 mvPosition = modelViewMatrix * vec4(displaced, 1.0);
     mvPosition.xyz += position * psize;

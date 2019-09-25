@@ -28,10 +28,10 @@ export default class ParticilizedLogo {
 	addListeners() {
 		this.handlerAnimate = this.animate.bind(this);
 
-		window.addEventListener('resize', this.resize.bind(this));
-		window.addEventListener('keyup', this.keyup.bind(this));
+		/*window.addEventListener('resize', this.resize.bind(this));
+		window.addEventListener('keyup', this.keyup.bind(this));*/
 
-		const el = this.webgl.renderer.domElement;
+		// const el = this.webgl.renderer.domElement;
 		//el.addEventListener('click', this.click.bind(this));
 	}
 
@@ -65,11 +65,11 @@ export default class ParticilizedLogo {
 		if (this.webgl) this.webgl.resize();
 	}
 
-	keyup(e) {
+	/*keyup(e) {
 		// g
 	}
 
 	click(e) {
 		this.webgl.next();
-	}
+	}*/
 }

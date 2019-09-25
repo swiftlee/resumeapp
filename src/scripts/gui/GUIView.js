@@ -6,11 +6,11 @@ export default class GUIView {
 		this.app = app;
 
 		this.particlesHitArea = false;
-		this.particlesRandom = 2;
-		this.particlesDepth = 10;
-		this.particlesSize = 1.5;
+		this.particlesRandom = 0.1;
+		this.particlesDepth = 2.24;
+		this.particlesSize = 1;
 		
-		this.touchRadius = 0.3;
+		this.touchRadius = 0.35;
 
 		this.range = [0, 1];
 		this.rangeRandom = [1, 10];
@@ -19,8 +19,8 @@ export default class GUIView {
 		this.rangeRadius = [0, 0.5];
 
 		// this.initStats();
-
-		// this.disable();
+		this.initControlKit();
+		this.disable();
 	}
 
 	initControlKit() {
@@ -35,7 +35,7 @@ export default class GUIView {
 		// .addCheckbox(this, 'particlesHitArea', { label: 'hit area', onChange: this.onParticlesChange.bind(this) })
 		.addSlider(this, 'particlesRandom', 'rangeRandom', { label: 'random', onChange: this.onParticlesChange.bind(this) })
 		.addSlider(this, 'particlesDepth', 'rangeDepth', { label: 'depth', onChange: this.onParticlesChange.bind(this) })
-		.addSlider(this, 'particlesSize', 'rangeSize', { label: 'size', onChange: this.onParticlesChange.bind(this) })
+		.addSlider(this, 'particlesSize', 'rangeSize', { label: 'size', onChange: this.onParticlesChange.bind(this) });
 
 		// store reference to canvas
 		const component = this.controlKit.getComponentBy({ label: 'trail' });
@@ -93,8 +93,8 @@ export default class GUIView {
 		this.app.webgl.particles.hitArea.material.visible = this.particlesHitArea;
 	}
 
-	onPostProcessingChange() {
+	/*onPostProcessingChange() {
 		if (!this.app.webgl.composer) return;
 		this.app.webgl.composer.enabled = this.postProcessing;
-	}
+	}*/
 }

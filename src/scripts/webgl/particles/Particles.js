@@ -41,7 +41,7 @@ export default class Particles {
 		if (discard) {
 			// discard pixels darker than threshold #22
 			numVisible = 0;
-			threshold = 34;
+			threshold = 22;
 
 			const img = this.texture.image;
 			const canvas = document.createElement('canvas');

@@ -48,16 +48,17 @@ body {
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  z-index: 3;
+  position: absolute;
+  background-size: auto;
 }
 
 .logo-container canvas {
-  z-index: 3;
+  position: inherit;
   height: var(--logo-height) !important;
   width: var(--logo-width) !important;
+  transform: translateX(50%);
+  margin: auto;
 }
 
 div {

@@ -16,7 +16,7 @@ void main() {
     vec4 colB = vec4(grey, grey, grey, 1.0);
 
     float border = 0.3;
-    float radius = 0.5;
+    float radius = 0.45;
     float dist = radius - distance(uv, vec2(0.5));
     float t = smoothstep(0.0, border, dist);
 
